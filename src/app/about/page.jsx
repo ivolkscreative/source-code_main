@@ -37,12 +37,6 @@ export default function AboutPage() {
       imageUrl: "/profile/leader/Erik Ferdian.JPG",
       instagramUrl: "https://www.instagram.com/erfr/",
     },
-    {
-      name: "Riefian Fajarsyah",
-      position: "CO-Founder",
-      imageUrl: "/profile/leader/Riefian Fajarsyah.jpg",
-      instagramUrl: "https://www.instagram.com/ifanseventeen/",
-    },
   ];
 
   const teams = [
@@ -53,16 +47,22 @@ export default function AboutPage() {
       instagramUrl: "https://www.instagram.com/sam.pipps/",
     },
     {
-      name: "Asep Lukmanul",
-      position: "Visual Supervisor",
-      imageUrl: "/profile/team/Asep Lukmanul.JPG",
-      instagramUrl: "https://www.instagram.com/eaudesave",
-    },
-    {
       name: "Jokodin Sukowi",
       position: "Project Manager",
       imageUrl: "/profile/team/Jokodin.jpg",
       instagramUrl: "https://www.instagram.com/jokodin/",
+    },
+    {
+      name: "Muhammad Rifqi Prayoga Rusli",
+      position: "Creative",
+      imageUrl: "/profile/team/Muh Rifqi Prayoga Rusli.png",
+      instagramUrl: "https://www.instagram.com/rifqiyoga_/)",
+    },
+    {
+      name: "Zidan Verdian Windoe",
+      position: "Production",
+      imageUrl: "/profile/team/Zidan.png",
+      instagramUrl: "https://www.instagram.com/zidanwindoe/",
     },
   ];
 
@@ -174,6 +174,19 @@ export default function AboutPage() {
       name: "Zidan Verdian Windoe",
       imageUrl: "/profile/internship/Vol2/Zidan Verdian Windoe.jpg",
       instagramUrl: "https://www.instagram.com/zidanwindoe/",
+    },
+  ];
+
+  const internships_vol_3 = [
+    {
+      name: "Ahmad Fathin",
+      imageUrl: "/profile/internship/Vol3/Ahmad Fathin.jpg",
+      instagramUrl: "https://www.instagram.com/ahmdft._/",
+    },
+    {
+      name: "Zefanya Eleora ferdian",
+      imageUrl: "/profile/internship/Vol3/Zefanya Eleora ferdian.jpg",
+      instagramUrl: "https://www.instagram.com/zefanyaeleora_/",
     },
   ];
 
@@ -767,6 +780,196 @@ export default function AboutPage() {
               </div>
             </div>
             {visibleCountMobile < internships_vol_2.length && (
+              <div className="md:hidden">
+                <div className="flex justify-center py-10">
+                  <button onClick={loadMoreMobileV2} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                    Load More
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="py-[4%] px-[5%]">
+            <h2 className="text-3xl font-bold mb-4">iVOLKS Internship Vol.3</h2>
+            {/* Dekstop Section*/}
+            <div className="hidden tablet-landscape:hidden lg:block">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="hidden md:flex md:flex-col md:gap-4">
+                    <div className="flex w-full space-x-10">
+                      {internships_vol_3.slice(0, 4).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships_vol_3.slice(4, 8).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships_vol_3.slice(8, 12).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships_vol_3.slice(12, 16).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Tablet Landscape Section */}
+            <div className="hidden md:hidden tablet-landscape:block lg:hidden">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="hidden md:flex md:flex-col md:gap-4">
+                    <div className="flex w-full space-x-10">
+                      {internships_vol_3.slice(0, 3).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships_vol_3.slice(3, 6).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships_vol_3.slice(6, 7).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tablet Section */}
+            <div className="hidden md:block tablet-landscape:hidden lg:hidden">
+              <div className="pt-[2%]">
+                <div className="flex flex-col gap-4">
+                  {internships_vol_3.slice(0, visibleCountTab).map((person, index) => {
+                    if (index % 2 === 0) {
+                      return (
+                        <div key={index} className="flex w-full space-x-10">
+                          <div className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                            <a href={person.instagramUrl} target="_blank">
+                              <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                            </a>
+                            <div className="text-center mt-2">
+                              <p className="font-semibold">{person.name}</p>
+                              <p>{person.position}</p>
+                            </div>
+                          </div>
+                          {/* Jika ada elemen kedua di grup yang sama */}
+                          {internships_vol_2[index + 1] && (
+                            <div className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                              <a href={internships_vol_3[index + 1].instagramUrl} target="_blank">
+                                <Image src={internships_vol_3[index + 1].imageUrl} alt={internships_vol_3[index + 1].name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                              </a>
+                              <div className="text-center mt-2">
+                                <p className="font-semibold">{internships_vol_3[index + 1].name}</p>
+                                <p>{internships_vol_3[index + 1].position}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            </div>
+            {visibleCountTab < internships_vol_3.length && (
+              <div className="hidden md:block lg:hidden">
+                <div className="flex justify-center py-10">
+                  <button onClick={loadMoreTabV2} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                    Load More
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Phone Section */}
+            <div className=" md:hidden">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    {internships_vol_3.slice(0, visibleCountMobile).map((person, index) => (
+                      <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                        <a href={person.instagramUrl} target="_blank">
+                          <Image src={person.imageUrl} alt={person.name} className="w-full aspect-square object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                        </a>
+                        <CardDescription person={person} />
+                        {/* <div className="text-center mt-2">
+                          <p className="font-semibold line-clamp-1">{person.name}</p>
+                          <p>{person.position}</p>
+                        </div> */}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {visibleCountMobile < internships_vol_3.length && (
               <div className="md:hidden">
                 <div className="flex justify-center py-10">
                   <button onClick={loadMoreMobileV2} className="px-4 py-2 text-white bg-primary-red rounded-md">
