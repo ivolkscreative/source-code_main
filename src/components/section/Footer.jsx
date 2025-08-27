@@ -49,7 +49,7 @@ export default function Footer() {
             <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aliquam iste ipsa, eligendi commodi aspernatur?</p>
           </div> */}
         </div>
-        <p className="pt-[3%] uppercase font-bold text-sm">Copyright © 2024 - PT SINERGI IMAJI EKSPRESI | All Rights Reserved</p>
+        <p className="pt-[3%] uppercase font-bold text-sm">Copyright © 2025 - PT SINERGI IMAJI EKSPRESI | All Rights Reserved</p>
       </div>
       <div className="px-5 py-[5%] text-center bg-black text-white mt-auto md:hidden">
         <div className="flex justify-center items-center flex-col gap-3 w-full">
