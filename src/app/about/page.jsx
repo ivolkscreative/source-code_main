@@ -47,12 +47,6 @@ export default function AboutPage() {
       instagramUrl: "https://www.instagram.com/sam.pipps/",
     },
     {
-      name: "Jokodin Sukowi",
-      position: "Project Manager",
-      imageUrl: "/profile/team/Jokodin.jpg",
-      instagramUrl: "https://www.instagram.com/jokodin/",
-    },
-    {
       name: "Muhammad Rifqi Prayoga Rusli",
       position: "Creative",
       imageUrl: "/profile/team/Muh Rifqi Prayoga Rusli.png",
@@ -360,7 +354,7 @@ export default function AboutPage() {
             <div className="hidden lg:block">
               <div className="pt-[2%] flex gap-3">
                 <div className="overflow-x-auto w-full py-4">
-                  <div className="grid grid-cols-4 gap-6">
+                  <div className="flex space-x-10">
                     {teams.map((person, index) => (
                       <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
                         <a href={person.instagramUrl} target="_blank">
