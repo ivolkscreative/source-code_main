@@ -205,6 +205,11 @@ export default function AboutPage() {
       name: "Muhammad Farhandriagi",
       imageUrl: "/profile/internship/Vol4/Farhan.png",
       instagramUrl: "https://www.instagram.com/farhandriagi/",
+    },
+    {
+      name: "Derryl Lacelo Patric Sipahutar",
+      imageUrl: "/profile/internship/Vol4/Derryl.png",
+      instagramUrl: "https://www.instagram.com/derrder__/",
     }
   ];
 
@@ -1006,7 +1011,7 @@ export default function AboutPage() {
                 <div className="overflow-x-auto w-full py-4">
                   <div className="hidden md:flex md:flex-col md:gap-4">
                     <div className="flex w-full space-x-10">
-                      {internships_vol_4.slice(0, 4).map((person, index) => (
+                      {internships_vol_4.map((person, index) => (
                         <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
                           <a href={person.instagramUrl} target="_blank">
                             <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
@@ -1131,7 +1136,7 @@ export default function AboutPage() {
                           {internships_vol_4[index + 1] && (
                             <div className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
                               <a href={internships_vol_4[index + 1].instagramUrl} target="_blank">
-                                <Image src={internships_vol_4[index + 1].imageUrl} alt={internships_vol_3[index + 1].name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                                <Image src={internships_vol_4[index + 1].imageUrl} alt={internships_vol_4[index + 1].name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
                               </a>
                               <div className="text-center mt-2">
                                 <p className="font-semibold">{internships_vol_4[index + 1].name}</p>
