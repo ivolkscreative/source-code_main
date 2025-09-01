@@ -179,7 +179,7 @@ export default function ContactPage() {
         
         const emailResult = await window.emailjs.send(
           'service_jf0b1ed',
-          'template_arkok4a',
+          'template_oe27k8g',
           {
             from_name: `${formData.firstName} ${formData.lastName}`,
             from_email: formData.email,
