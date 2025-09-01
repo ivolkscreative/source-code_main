@@ -21,7 +21,7 @@ export default function ContactPageComponent({ props }) {
         <div>
           <p className="italic font-medium text-5xl">Let&apos;s Talks</p>
           <p className="italic font-medium text-5xl">if you are interested in us</p> <br />
-          <p className="font-light">Currently Contact Form is Unavailable please Contact us directly to <a className="font-medium" href="mailto:contact@ivolkscreative.com">contact@ivolkscreative.com</a></p>
+          <p className="font-light">Currently Contact Form is Unavailable, please Contact us directly to <a className="font-medium" href="mailto:contact@ivolkscreative.com">contact@ivolkscreative.com</a></p>
         </div>
         <form action="#" onSubmit={handleSubmit}>
           <div>
