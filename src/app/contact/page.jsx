@@ -10,6 +10,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
   const [submitError, setSubmitError] = useState("");
+  const [emailJSLoaded, setEmailJSLoaded] = useState(false);
   const commentMessageRef = useRef(null);
 
   const [formData, setFormData] = useState({
@@ -25,16 +26,43 @@ export default function ContactPage() {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
     script.onload = () => {
-      // Initialize EmailJS
       if (window.emailjs) {
-        window.emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '0NXaKIF4666w0Vw7X');
+        window.emailjs.init('0NXaKIF4666w0Vw7X');
+        setEmailJSLoaded(true);
+        console.log('EmailJS loaded and initialized');
       }
+    };
+    script.onerror = () => {
+      console.error('Failed to load EmailJS');
     };
     document.head.appendChild(script);
 
     return () => {
-      document.head.removeChild(script);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
+  }, []);
+
+  // Test API endpoint saat component mount
+  useEffect(() => {
+    const testAPI = async () => {
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'GET'
+        });
+        if (response.ok) {
+          const data = await response.json();
+          console.log('API endpoint working:', data);
+        } else {
+          console.warn('API endpoint returned:', response.status);
+        }
+      } catch (error) {
+        console.warn('API endpoint test failed:', error);
+      }
+    };
+    
+    testAPI();
   }, []);
 
   const handleChange = (e) => {
@@ -103,21 +131,26 @@ export default function ContactPage() {
     // Validasi email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setSubmitError("Inva;id Email Format");
+      setSubmitError("Invalid Email Format");
       setIsSubmitting(false);
       return;
     }
 
-    try {
-      // Option 1: Menggunakan API route
-      const body = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        purpose: purpose,
-        commentMessage: commentMessage,
-      };
+    const body = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      purpose: purpose,
+      commentMessage: commentMessage,
+    };
 
+    let apiSuccess = false;
+    let emailJSSuccess = false;
+
+    try {
+      // Method 1: Coba API route terlebih dahulu
+      console.log('Trying API route...');
+      
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -126,53 +159,77 @@ export default function ContactPage() {
         body: JSON.stringify(body),
       });
 
-      const data = await res.json();
-
       if (res.ok) {
-        setSubmitMessage(data.message);
-        
-        // Option 2: Juga kirim via EmailJS untuk backup
-        if (window.emailjs) {
-          try {
-            await window.emailjs.send(
-              process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_jf0b1ed',
-              process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_arkok4a',
-              {
-                from_name: `${formData.firstName} ${formData.lastName}`,
-                from_email: formData.email,
-                purpose: purpose,
-                message: commentMessage,
-                to_email: 'contact@yourcompany.com' // Ganti dengan email tujuan
-              }
-            );
-            console.log('EmailJS sent successfully');
-          } catch (emailError) {
-            console.error('EmailJS error:', emailError);
-          }
-        }
-        
-        // Reset form
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          purpose: "",
-          comment_message: "",
-        });
-        setPurpose("");
-        setCommentMessage("");
-        if (commentMessageRef.current) {
-          commentMessageRef.current.value = "";
-        }
+        const data = await res.json();
+        console.log('API route success:', data);
+        apiSuccess = true;
       } else {
-        setSubmitError(data.error || "Error submitting the form.");
+        console.log('API route failed with status:', res.status);
+        const errorData = await res.json().catch(() => ({ error: 'Unknown error' }));
+        console.log('API error data:', errorData);
       }
-    } catch (err) {
-      console.error("Submit error:", err);
-      setSubmitError("Server Error, please try again later.");
-    } finally {
-      setIsSubmitting(false);
+    } catch (apiError) {
+      console.log('API route error:', apiError.message);
     }
+
+    // Method 2: EmailJS sebagai backup (atau primary jika API gagal)
+    if (emailJSLoaded && window.emailjs) {
+      try {
+        console.log('Trying EmailJS...');
+        
+        const emailResult = await window.emailjs.send(
+          'service_jf0b1ed',
+          'template_arkok4a',
+          {
+            from_name: `${formData.firstName} ${formData.lastName}`,
+            from_email: formData.email,
+            purpose: purpose,
+            message: commentMessage,
+            reply_to: formData.email
+          }
+        );
+        
+        console.log('EmailJS success:', emailResult);
+        emailJSSuccess = true;
+      } catch (emailError) {
+        console.error('EmailJS error:', emailError);
+      }
+    } else {
+      console.warn('EmailJS not loaded or not available');
+    }
+
+    // Evaluasi hasil
+    if (apiSuccess || emailJSSuccess) {
+      let successMessage = "Thanks for reaching out! We will get back to you soon.";
+      
+      if (apiSuccess && emailJSSuccess) {
+        successMessage += " (Sent via both API and Email)";
+      } else if (apiSuccess) {
+        successMessage += " (Sent via API)";
+      } else if (emailJSSuccess) {
+        successMessage += " (Sent via Email)";
+      }
+      
+      setSubmitMessage(successMessage);
+      
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        purpose: "",
+        comment_message: "",
+      });
+      setPurpose("");
+      setCommentMessage("");
+      if (commentMessageRef.current) {
+        commentMessageRef.current.value = "";
+      }
+    } else {
+      setSubmitError("Failed to send message. Please try again or contact us directly.");
+    }
+
+    setIsSubmitting(false);
   };
 
   useEffect(() => {
@@ -213,6 +270,7 @@ export default function ContactPage() {
           isSubmitting: isSubmitting,
           submitMessage: submitMessage,
           submitError: submitError,
+          emailJSLoaded: emailJSLoaded, // Untuk debugging
         }}
       />
       <Footer />
