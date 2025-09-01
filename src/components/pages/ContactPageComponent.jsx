@@ -3,6 +3,7 @@ import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { AiOutlinePhone } from "react-icons/ai";
 import { FaArrowUp } from "react-icons/fa6";
 import ContactBottom from "../section/ContactBottom";
+import { color } from "framer-motion";
 
 export default function ContactPageComponent({ props }) {
   const { scrolling, scrollToTop, purpose, formData, commentMessage, commentMessageRef, handleChange, handlePurposeChange, handleSubmit } = props;
@@ -19,7 +20,8 @@ export default function ContactPageComponent({ props }) {
       <div className="py-[8%] px-[5%] md:py-[5%] md:px-[3%] grid lg:grid-cols-2 gap-10 lg:gap-20">
         <div>
           <p className="italic font-medium text-5xl">Let&apos;s Talks</p>
-          <p className="italic font-medium text-5xl">if you are interested in us</p>
+          <p className="italic font-medium text-5xl">if you are interested in us</p> <br />
+          <p className="font-light">Currently Contact Form is Unavailable please Contact us directly to <a className="font-medium" href="mailto:contact@ivolkscreative.com">contact@ivolkscreative.com</a></p>
         </div>
         <form action="#" onSubmit={handleSubmit}>
           <div>
@@ -29,12 +31,12 @@ export default function ContactPageComponent({ props }) {
             </div>
             <div className="flex gap-5 w-full">
               <div className="flex flex-col md:w-full">
-                <input type="text" id="firstName" name="firstName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.firstName} onChange={handleChange} required />
-                <p className="text-sm opacity-60">First</p>
+                <input disabled type="text" id="firstName" name="firstName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.firstName} onChange={handleChange} required />
+                <p className="text-sm opacity-60">First Name</p>
               </div>
               <div className="flex flex-col md:w-full">
-                <input type="text" id="lastName" name="lastName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.lastName} onChange={handleChange} required />
-                <p className="text-sm opacity-60">Last</p>
+                <input disabled type="text" id="lastName" name="lastName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.lastName} onChange={handleChange} required />
+                <p className="text-sm opacity-60">Last Name</p>
               </div>
             </div>
             <div className="py-3">
@@ -42,19 +44,19 @@ export default function ContactPageComponent({ props }) {
                 <p className="font-semibold">Email</p>
                 <span className="text-red-500">*</span>
               </div>
-              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="p-2 w-full border border-gray-200 focus:border-gray-500" required />
+              <input disabled type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="p-2 w-full border border-gray-200 focus:border-gray-500" required />
             </div>
             <div>
               <div className="flex items-center gap-0.5">
                 <p className="font-semibold">Purpose</p>
                 <span className="text-red-500">*</span>
               </div>
-              <select name="purpose" id="purpose" className="w-full p-2 border border-gray-200" value={purpose} onChange={handlePurposeChange} required>
+              <select disabled name="purpose" id="purpose" className="w-full p-2 border border-gray-200" value={purpose} onChange={handlePurposeChange} required>
                 <option value="">Select a purpose</option>
                 <option value="create_branded_video">Create Branded Video</option>
                 <option value="screening_inquires">Screening Inquires</option>
                 <option value="career_inquires">Career Inquires</option>
-                <option value="just_say_hello">Just Say Hello</option>
+                <option value="just_say_hello">Just to Say Hello</option>
               </select>
             </div>
             <div className="py-3">
@@ -62,9 +64,9 @@ export default function ContactPageComponent({ props }) {
                 <p className="font-semibold">Comment or Message</p>
                 <span className="text-red-500">*</span>
               </div>
-              <textarea name="comment_message" id="comment_message" className="w-full border border-gray-300" rows={5} required ref={commentMessageRef} onChange={handleChange} defaultValue={commentMessage}></textarea>
+              <textarea disabled name="comment_message" id="comment_message" className="w-full border border-gray-300" rows={5} required ref={commentMessageRef} onChange={handleChange} defaultValue={commentMessage}></textarea>
             </div>
-            <button className="uppercase bg-primary-red text-white py-4 px-5 font-semibold text-lg rounded-md hover:bg-red-400">Submit</button>
+            <button disabled className="uppercase bg-primary-red text-white py-4 px-5 font-semibold text-lg rounded-md hover:bg-red-400">Submit</button>
           </div>
         </form>
       </div>
@@ -80,7 +82,7 @@ export default function ContactPageComponent({ props }) {
           </div>
           <div className="flex items-center gap-10">
             <AiOutlinePhone className="text-3xl" />
-            <p>(+62)851-6157-8045 (Ahmad Pippo)</p>
+            <p>(+62) 851-6157-8045 (Ahmad Pippo)</p>
           </div>
           <div className="flex items-center gap-10">
             <IoMailOutline className="text-3xl" />
