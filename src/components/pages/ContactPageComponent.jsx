@@ -3,10 +3,20 @@ import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { AiOutlinePhone } from "react-icons/ai";
 import { FaArrowUp } from "react-icons/fa6";
 import ContactBottom from "../section/ContactBottom";
-import { color } from "framer-motion";
 
 export default function ContactPageComponent({ props }) {
-  const { scrolling, scrollToTop, purpose, formData, commentMessage, commentMessageRef, handleChange, handlePurposeChange, handleSubmit } = props;
+  const { 
+    scrolling, 
+    scrollToTop, 
+    formData, 
+    handleChange, 
+    handlePurposeChange, 
+    handleSubmit,
+    isSubmitting,
+    submitMessage,
+    submitError,
+    emailJSLoaded
+  } = props;
 
   return (
     <div>
@@ -16,42 +26,88 @@ export default function ContactPageComponent({ props }) {
         <h1 className="font-bold text-6xl lg:text-8xl uppercase">Let&apos;s Get In Touch!</h1>
         <p className="lg:text-lg font-medium">Got a project in mind or need our creative expertise? Fill out the form below, and let&apos;s make something amazing together!</p>
       </div>
+      
       {/* Contact US */}
       <div className="py-[8%] px-[5%] md:py-[5%] md:px-[3%] grid lg:grid-cols-2 gap-10 lg:gap-20">
         <div>
           <p className="italic font-medium text-5xl">Let&apos;s Talks</p>
           <p className="italic font-medium text-5xl">if you are interested in us</p> <br />
-          <p className="font-light">Currently Contact Form is Unavailable, please Contact us directly to <a className="font-medium" href="mailto:contact@ivolkscreative.com">contact@ivolkscreative.com</a></p>
         </div>
-        <form action="#" onSubmit={handleSubmit}>
+        
+        <form onSubmit={handleSubmit}>
           <div>
+            {/* Display submit messages */}
+            {submitMessage && (
+              <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
+                {submitMessage}
+              </div>
+            )}
+            {submitError && (
+              <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+                {submitError}
+              </div>
+            )}
+
             <div className="flex items-center gap-0.5">
               <p className="font-semibold">Name</p>
               <span className="text-red-500">*</span>
             </div>
             <div className="flex gap-5 w-full">
               <div className="flex flex-col md:w-full">
-                <input disabled type="text" id="firstName" name="firstName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.firstName} onChange={handleChange} required />
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  name="firstName" 
+                  className="p-2 border border-gray-200 focus:border-gray-500 w-full" 
+                  value={formData.firstName} 
+                  onChange={handleChange} 
+                  required 
+                />
                 <p className="text-sm opacity-60">First Name</p>
               </div>
               <div className="flex flex-col md:w-full">
-                <input disabled type="text" id="lastName" name="lastName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.lastName} onChange={handleChange} required />
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  name="lastName" 
+                  className="p-2 border border-gray-200 focus:border-gray-500 w-full" 
+                  value={formData.lastName} 
+                  onChange={handleChange} 
+                  required 
+                />
                 <p className="text-sm opacity-60">Last Name</p>
               </div>
             </div>
+
             <div className="py-3">
               <div className="flex items-center gap-0.5">
                 <p className="font-semibold">Email</p>
                 <span className="text-red-500">*</span>
               </div>
-              <input disabled type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="p-2 w-full border border-gray-200 focus:border-gray-500" required />
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                value={formData.email} 
+                onChange={handleChange} 
+                className="p-2 w-full border border-gray-200 focus:border-gray-500" 
+                required 
+              />
             </div>
+
             <div>
               <div className="flex items-center gap-0.5">
                 <p className="font-semibold">Purpose</p>
                 <span className="text-red-500">*</span>
               </div>
-              <select disabled name="purpose" id="purpose" className="w-full p-2 border border-gray-200" value={purpose} onChange={handlePurposeChange} required>
+              <select 
+                name="purpose" 
+                id="purpose" 
+                className="w-full p-2 border border-gray-200" 
+                value={formData.purpose} 
+                onChange={handlePurposeChange} 
+                required
+              >
                 <option value="">Select a purpose</option>
                 <option value="create_branded_video">Create Branded Video</option>
                 <option value="screening_inquires">Screening Inquires</option>
@@ -59,17 +115,38 @@ export default function ContactPageComponent({ props }) {
                 <option value="just_say_hello">Just to Say Hello</option>
               </select>
             </div>
+
             <div className="py-3">
               <div className="flex items-center gap-0.5">
                 <p className="font-semibold">Comment or Message</p>
                 <span className="text-red-500">*</span>
               </div>
-              <textarea disabled name="comment_message" id="comment_message" className="w-full border border-gray-300" rows={5} required ref={commentMessageRef} onChange={handleChange} defaultValue={commentMessage}></textarea>
+              <textarea 
+                name="comment_message" 
+                id="comment_message" 
+                className="w-full border border-gray-300 p-2" 
+                rows={5} 
+                required 
+                value={formData.comment_message}
+                onChange={handleChange}
+              />
             </div>
-            <button disabled className="uppercase bg-primary-red text-white py-4 px-5 font-semibold text-lg rounded-md hover:bg-red-400">Submit</button>
+
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className={`uppercase text-white py-4 px-5 font-semibold text-lg rounded-md transition ${
+                isSubmitting 
+                  ? 'bg-gray-400 cursor-not-allowed' 
+                  : 'bg-primary-red hover:bg-red-400'
+              }`}
+            >
+              {isSubmitting ? 'Submitting...' : 'Submit'}
+            </button>
           </div>
         </form>
       </div>
+
       {/* Form */}
       <div className="py-[8%] px-[5%] md:py-[5%] md:px-[3%] grid lg:grid-cols-2 gap-10 lg:gap-20">
         <div className="flex flex-col gap-5">
@@ -98,13 +175,19 @@ export default function ContactPageComponent({ props }) {
             allowFullScreen
             loading="lazy"
             className="w-full h-[500px] lg:h-[250px] rounded-lg"
-            referrerPolicy="no-referrer-when-downgrade"></iframe>
+            referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
+
       <ContactBottom />
-      {/* Maps Location */}
+
+      {/* Scroll to top button */}
       {scrolling && (
-        <button onClick={scrollToTop} className="fixed bottom-28 right-3 bg-transparent text-gray-500 p-4 border border-gray-400 rounded-full shadow-lg hover:bg-gray-300 transition text-xl z-50">
+        <button 
+          onClick={scrollToTop} 
+          className="fixed bottom-28 right-3 bg-transparent text-gray-500 p-4 border border-gray-400 rounded-full shadow-lg hover:bg-gray-300 transition text-xl z-50"
+        >
           <FaArrowUp />
         </button>
       )}

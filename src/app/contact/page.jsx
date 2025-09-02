@@ -5,13 +5,10 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ContactPage() {
   const [scrolling, setScrolling] = useState(false);
-  const [purpose, setPurpose] = useState("");
-  const [commentMessage, setCommentMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
   const [submitError, setSubmitError] = useState("");
   const [emailJSLoaded, setEmailJSLoaded] = useState(false);
-  const commentMessageRef = useRef(null);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -74,7 +71,6 @@ export default function ContactPage() {
 
   const handlePurposeChange = (event) => {
     const selectedPurpose = event.target.value;
-    setPurpose(selectedPurpose);
 
     let templateMessage = "";
     switch (selectedPurpose) {
@@ -94,24 +90,10 @@ export default function ContactPage() {
         templateMessage = "";
     }
 
-    setCommentMessage(templateMessage);
     setFormData({
       ...formData,
       purpose: selectedPurpose,
       comment_message: templateMessage,
-    });
-
-    if (commentMessageRef.current) {
-      commentMessageRef.current.value = templateMessage;
-    }
-  };
-
-  const handleCommentChange = (e) => {
-    const value = e.target.value;
-    setCommentMessage(value);
-    setFormData({
-      ...formData,
-      comment_message: value,
     });
   };
 
@@ -122,7 +104,7 @@ export default function ContactPage() {
     setSubmitMessage("");
 
     // Validasi client-side
-    if (!formData.firstName || !formData.lastName || !formData.email || !purpose || !commentMessage) {
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.purpose || !formData.comment_message) {
       setSubmitError("Please fill all of these forms");
       setIsSubmitting(false);
       return;
@@ -140,8 +122,8 @@ export default function ContactPage() {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
-      purpose: purpose,
-      commentMessage: commentMessage,
+      purpose: formData.purpose,
+      commentMessage: formData.comment_message, // Gunakan formData.comment_message
     };
 
     let apiSuccess = false;
@@ -183,8 +165,8 @@ export default function ContactPage() {
           {
             from_name: `${formData.firstName} ${formData.lastName}`,
             from_email: formData.email,
-            purpose: purpose,
-            message: commentMessage,
+            purpose: formData.purpose,
+            message: formData.comment_message, // Gunakan formData.comment_message
             reply_to: formData.email
           }
         );
@@ -202,14 +184,6 @@ export default function ContactPage() {
     if (apiSuccess || emailJSSuccess) {
       let successMessage = "Thanks for reaching out! We will get back to you soon.";
       
-      if (apiSuccess && emailJSSuccess) {
-        successMessage += " (Sent via both API and Email)";
-      } else if (apiSuccess) {
-        successMessage += " (Sent via API)";
-      } else if (emailJSSuccess) {
-        successMessage += " (Sent via Email)";
-      }
-      
       setSubmitMessage(successMessage);
       
       // Reset form
@@ -220,11 +194,6 @@ export default function ContactPage() {
         purpose: "",
         comment_message: "",
       });
-      setPurpose("");
-      setCommentMessage("");
-      if (commentMessageRef.current) {
-        commentMessageRef.current.value = "";
-      }
     } else {
       setSubmitError("Failed to send message. Please try again or contact us directly.");
     }
@@ -260,17 +229,13 @@ export default function ContactPage() {
           scrolling: scrolling,
           scrollToTop: scrollToTop,
           formData: formData,
-          purpose: purpose,
-          commentMessage: commentMessage,
-          commentMessageRef: commentMessageRef,
           handlePurposeChange: handlePurposeChange,
           handleChange: handleChange,
-          handleCommentChange: handleCommentChange,
           handleSubmit: handleSubmit,
           isSubmitting: isSubmitting,
           submitMessage: submitMessage,
           submitError: submitError,
-          emailJSLoaded: emailJSLoaded, // Untuk debugging
+          emailJSLoaded: emailJSLoaded,
         }}
       />
       <Footer />
