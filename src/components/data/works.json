@@ -1,0 +1,193 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Fiesta Ready to Serve",
+      "thumbnailUrl": "/thumbnail/fiesta.jpg",
+      "link": "https://www.youtube.com/embed/4qSHeEAOrJo?si=MdPL5oG5zljAA2Lg",
+      "category": "TVC"
+    },
+    {
+      "id": 2,
+      "title": "CAP PANDA X NEX CARLOS",
+      "thumbnailUrl": "/thumbnail/cappandanexcarlos.jpg",
+      "link": "https://www.youtube.com/embed/2K5TkYD8BIQ?si=8khUDIaYbKMq4iuY",
+      "category": "DVC"
+    },
+    {
+      "id": 3,
+      "title": "Gold Ribbon",
+      "thumbnailUrl": "/thumbnail/goldribbon.jpg",
+      "link": "https://www.youtube.com/embed/Fqji1QsuPjU?si=Vpv45G3v26Nny8cQ",
+      "category": "DVC"
+    },
+    {
+      "id": 4,
+      "title": "Smartheart",
+      "thumbnailUrl": "/thumbnail/smartheart.jpg",
+      "link": "https://www.youtube.com/embed/BiNZPXapJso?si=5LO1sGBNMrwomD_G",
+      "category": "DVC"
+    },
+    {
+      "id": 5,
+      "title": "Nongshim STY Dance",
+      "thumbnailUrl": "/thumbnail/nongshimbulgogi.jpg",
+      "link": "https://www.youtube.com/embed/g5tYAdjGnHU?si=rnC6UD7N1i6k1Vi6",
+      "category": "DVC"
+    },
+    {
+      "id": 6,
+      "title": "Zoya",
+      "thumbnailUrl": "/thumbnail/zoya.jpg",
+      "link": "https://www.youtube.com/embed/UQPu-saiqmI?si=2rN69dciPD8HeDkJ",
+      "category": "DVC"
+    },
+    {
+      "id": 7,
+      "title": "Torabika Creamy Latte",
+      "thumbnailUrl": "/thumbnail/torabika.jpg",
+      "link": "https://www.youtube.com/embed/wn4NppYBck8?si=cD0rdjN_ZkPSPpzW",
+      "category": "DVC"
+    },
+    {
+      "id": 8,
+      "title": "Kau & Dia Trailer",
+      "thumbnailUrl": "/thumbnail/kaudandia.jpg",
+      "link": "https://www.youtube.com/embed/Po2PTs6VvqQ?si=7QxDlGYn49lJ-Z-J",
+      "category": "Film"
+    },
+    {
+      "id": 9,
+      "title": "Pinvest - Gala Launch",
+      "thumbnailUrl": "/thumbnail/galalaunch.jpg",
+      "link": "https://www.youtube.com/embed/9_vnU1Xz9Q0?si=B7BmfddBzxwa4SZs",
+      "category": "Corporate"
+    },
+    {
+      "id": 10,
+      "title": "FIFGROUP Video Motivasi 2024",
+      "thumbnailUrl": "/thumbnail/fifgroupvideomotivasi.jpg",
+      "link": "https://www.youtube.com/embed/dc_pZUrFsFo?si=x_IGtyga28Fa1z08",
+      "category": "Corporate"
+    },
+    {
+      "id": 11,
+      "title": "PGN Saka Joint Offshore Patrol",
+      "thumbnailUrl": "/thumbnail/pgnsakajointoffshorepatrol.jpg",
+      "link": "https://www.youtube.com/embed/b8bjhEXOj7U?si=1xMv5S0Y7oOP_von",
+      "category": "Corporate"
+    },
+    {
+      "id": 12,
+      "title": "PGN 2 Compro",
+      "thumbnailUrl": "/thumbnail/pgn2.jpg",
+      "link": "https://www.youtube.com/embed/vyq71fnF5u8?si=ToeFfwZoOupymmRG",
+      "category": "Corporate"
+    },
+    {
+      "id": 13,
+      "title": "KLINK - Product Launching",
+      "thumbnailUrl": "/thumbnail/klink.jpg",
+      "link": "https://www.youtube.com/embed/yQTFyWtR44c?si=3ThYocTSbTVS4eF2",
+      "category": "Corporate"
+    },
+    {
+      "id": 14,
+      "title": "Proud UNTARIAN",
+      "thumbnailUrl": "/thumbnail/prouduntarian.jpg",
+      "link": "https://www.youtube.com/embed/mkPYGJRvSQM?si=iRS7arwNV3DOIOYG",
+      "category": "Corporate"
+    },
+    {
+      "id": 15,
+      "title": "BPJS KETENAGAKERJAAN COMPRO",
+      "thumbnailUrl": "/thumbnail/bpjs.jpg",
+      "link": "https://www.youtube.com/embed/Kd-S2Gc212o?si=PwHasqbuX5zF0Rbi",
+      "category": "Corporate"
+    },
+    {
+      "id": 16,
+      "title": "FIFGROUP Rapim 2024 Strategy",
+      "thumbnailUrl": "/thumbnail/fifgrouprapim2024.jpg",
+      "link": "https://www.youtube.com/embed/E94jQdDM71Y?si=lOqE2J8e8dosUn8z",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 17,
+      "title": "FIFGROUP 2024 BUMPER",
+      "thumbnailUrl": "/thumbnail/fifgroupbumper2024.jpg",
+      "link": "https://www.youtube.com/embed/xNLlpzKsOSA?si=nh1-EG9Z8Xz7ZZoI",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 18,
+      "title": "Pizza Hut Delivery - Study Case",
+      "thumbnailUrl": "/thumbnail/phd.jpg",
+      "link": "https://www.youtube.com/embed/sQRwN-C9ed0?si=2hq3fXcnkEparMsj",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 19,
+      "title": "Transition Bumper",
+      "thumbnailUrl": "/thumbnail/transitionbumper.jpg",
+      "link": "https://www.youtube.com/embed/ODupVm_qs54?si=ri4m3NhNonNX7WkE",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 20,
+      "title": "FIFGROUP Rapim 2022 Strategy",
+      "thumbnailUrl": "/thumbnail/fifgrouprapim2022.jpg",
+      "link": "https://www.youtube.com/embed/D3yijDSQPyI?si=M5Jfa1jGVQ7ojr-z",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 21,
+      "title": "FIFGROUP 2022 BUMPER",
+      "thumbnailUrl": "/thumbnail/fifgroupbumper2022.jpg",
+      "link": "https://www.youtube.com/embed/7BZA2j0Obbk?si=izy79V1264Ld4AWR",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 22,
+      "title": "Pemilu 2019",
+      "thumbnailUrl": "/thumbnail/pemilu2019.jpg",
+      "link": "https://www.youtube.com/embed/2eifOrk0-n0?si=ScxqOObR5VOkwYuo",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 23,
+      "title": "Pernah Disana",
+      "thumbnailUrl": "/thumbnail/pernahdisana.jpg",
+      "link": "https://www.youtube.com/embed/zJoAz3WK-7k?si=-VBGRrBLUmnfrIs-",
+      "category": "Music Video"
+    },
+    {
+      "id": 24,
+      "title": "Komitmen",
+      "thumbnailUrl": "/thumbnail/komitmen.jpg",
+      "link": "https://www.youtube.com/embed/Soc4aqt8wXE?si=WJDvouBKrY6IliLB",
+      "category": "Music Video"
+    },
+    {
+      "id": 25,
+      "title": "Cinta Separuh Jiwa",
+      "thumbnailUrl": "/thumbnail/cintaseparuhjiwa.jpg",
+      "link": "https://www.youtube.com/embed/aaiAm2Hp_1k?si=r4cbgfPkGnIc5pIx",
+      "category": "Music Video"
+    },
+    {
+      "id": 26,
+      "title": "NIC - Silence",
+      "thumbnailUrl": "/thumbnail/silence.jpg",
+      "link": "https://www.youtube.com/embed/VCx0_kH8c0g?si=AulILmsSpC0AgGLl",
+      "category": "Music Video"
+    },
+    {
+      "id": 27,
+      "title": "Semangat Zaman Now",
+      "thumbnailUrl": "/thumbnail/coba4.jpg",
+      "link": "https://www.youtube.com/embed/Z4_cyuYQStY?si=IWcplbocOcEWN_8l",
+      "category": "Music Video"
+    }
+  ]
+}

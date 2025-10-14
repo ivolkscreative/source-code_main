@@ -1,0 +1,328 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Lifree",
+      "imageUrl": "/photography/commercial/LIFREE_01.jpg",
+      "imageRatio": "potrait",
+      "category": "Commercial"
+    },
+    {
+      "id": 2,
+      "name": "Holisticare Ester C",
+      "imageUrl": "/photography/commercial/ESTER C_01.jpg",
+      "category": "Commercial"
+    },
+
+    {
+      "id": 3,
+      "name": "Holisticare Ester C",
+      "imageUrl": "/photography/commercial/ESTER C_02.jpg",
+      "category": "Commercial"
+    },
+
+    {
+      "id": 4,
+      "name": "Holisticare Ester C",
+      "imageUrl": "/photography/commercial/ESTER C_03.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 14,
+      "name": "Hypermart",
+      "imageUrl": "/photography/commercial/HYPERMART.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 5,
+      "name": "Zwitsal",
+      "imageUrl": "/photography/commercial/ZWITSAL.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 6,
+      "name": "Rinso Matic - Unilever",
+      "imageUrl": "/photography/commercial/RINSO.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 7,
+      "name": "Torabika",
+      "imageUrl": "/photography/commercial/TORABIKA_02.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 16,
+      "name": "K-ION Nano",
+      "imageUrl": "/photography/commercial/K-ION NANO 8_02.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 9,
+      "name": "K-Care",
+      "imageUrl": "/photography/commercial/_MGL9617.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 10,
+      "name": "Torabika",
+      "imageUrl": "/photography/commercial/TORABIKA_06.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 11,
+      "name": "Torabika",
+      "imageUrl": "/photography/commercial/TORABIKA_07.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 12,
+      "name": "Indosat",
+      "imageUrl": "/photography/commercial/Indosat.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 13,
+      "name": "K-ION Nano",
+      "imageUrl": "/photography/commercial/K-ION NANO.jpg",
+      "category": "Commercial"
+    },
+
+    {
+      "id": 15,
+      "name": "K-ION Nano",
+      "imageUrl": "/photography/commercial/K-ION NANO 8_01.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 8,
+      "name": "Torabika",
+      "imageUrl": "/photography/commercial/TORABIKA_04.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 17,
+      "name": "K-ION Nano",
+      "imageUrl": "/photography/commercial/K-ION PREMIUM 7_01.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 18,
+      "name": "Omega Squa",
+      "imageUrl": "/photography/commercial/OMEGA SQUA.jpg",
+      "category": "Commercial"
+    },
+    {
+      "id": 19,
+      "name": "Black Jam",
+      "imageUrl": "/photography/beautycare/BLACKJAM_BROCHURE-01.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 25,
+      "name": "Hair Rejuve",
+      "imageUrl": "/photography/beautycare/HAIR REJUVE_BROCHURE-01.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 18,
+      "name": "K-Care",
+      "imageUrl": "/photography/beautycare/6L2A0338-.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 20,
+      "name": "CMN Glow",
+      "imageUrl": "/photography/beautycare/CMN_02.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 21,
+      "name": "CMN Glow",
+      "imageUrl": "/photography/beautycare/CMN_07.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 22,
+      "name": "CMN Glow",
+      "imageUrl": "/photography/beautycare/CMN_01.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 23,
+      "name": "D Flora Compact Powder",
+      "imageUrl": "/photography/beautycare/D_Flora Compact Powder.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 24,
+      "name": "Fragnance",
+      "imageUrl": "/photography/beautycare/DSC00591.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 26,
+      "name": "K-Care",
+      "imageUrl": "/photography/beautycare/K-CARE_01.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 27,
+      "name": "K-Reclar",
+      "imageUrl": "/photography/beautycare/K-RECLAR_01.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 28,
+      "name": "Lash Studio",
+      "imageUrl": "/photography/beautycare/LASH_STUDIO0209 color-.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 29,
+      "name": "Marine Essence",
+      "imageUrl": "/photography/beautycare/Marine Essence Image.jpg",
+      "category": "Beautycare"
+    },
+    {
+      "id": 30,
+      "name": "Express Group",
+      "imageUrl": "/photography/corporate/expressgroup/002_01.jpg",
+      "category": "Corporate"
+    },
+
+    {
+      "id": 35,
+      "name": "Indosat Ooredo",
+      "imageUrl": "/photography/corporate/indosat/02.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 36,
+      "name": "Indosat Ooredo",
+      "imageUrl": "/photography/corporate/indosat/03.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 31,
+      "name": "Express Group",
+      "imageUrl": "/photography/corporate/expressgroup/003_01.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 37,
+      "name": "Indosat Ooredo",
+      "imageUrl": "/photography/corporate/indosat/04.jpg",
+      "category": "Corporate"
+    },
+
+    {
+      "id": 38,
+      "name": "Indosat Ooredo",
+      "imageUrl": "/photography/corporate/indosat/08.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 39,
+      "name": "Indosat Ooredo",
+      "imageUrl": "/photography/corporate/indosat/10.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 40,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1073.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 41,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1157.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 42,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1204.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 33,
+      "name": "Express Group",
+      "imageUrl": "/photography/corporate/expressgroup/006_01.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 43,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1299.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 44,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1363.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 34,
+      "name": "Express Group",
+      "imageUrl": "/photography/corporate/expressgroup/008_04.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 45,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1390.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 46,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1560.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 47,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1572.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 48,
+      "name": "IPC Pelindo",
+      "imageUrl": "/photography/corporate/ipcpelindo/IMG_1642.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 32,
+      "name": "Express Group",
+      "imageUrl": "/photography/corporate/expressgroup/005_04.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 49,
+      "name": "KLINK",
+      "imageUrl": "/photography/corporate/klink/_M6A0043.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 50,
+      "name": "KLINK",
+      "imageUrl": "/photography/corporate/klink/_M6A1537.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 51,
+      "name": "KLINK",
+      "imageUrl": "/photography/corporate/klink/DJI_0694.jpg",
+      "category": "Corporate"
+    },
+    {
+      "id": 52,
+      "name": "KLINK",
+      "imageUrl": "/photography/corporate/klink/LM0A9962--.jpg",
+      "category": "Corporate"
+    }
+  ]
+}
