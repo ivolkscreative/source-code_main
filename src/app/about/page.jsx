@@ -225,6 +225,11 @@ export default function AboutPage() {
       name: "Rezky Asterina Dwi Puspa",
       imageUrl: "/profile/internship/Vol4/ESTER.jpg",
       instagramUrl: "https://www.instagram.com/rezkyasterina_",
+    },
+    {
+      name: "Bayu Fito Mashuri",
+      imageUrl: "/profile/internship/Vol4/FITO.jpg",
+      instagramUrl: "https://www.instagram.com/bayu_mashuri",
     }
   ];
 
