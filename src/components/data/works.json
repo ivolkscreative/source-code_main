@@ -1,6 +1,13 @@
 {
   "data": [
     {
+      "id": 29,
+      "title": "LUXEIR",
+      "thumbnailUrl": "/thumbnail/LUXEIR.png",
+      "link": "https://youtube.com/embed/b3Jx0uLbIJI?si=71rZcEqdx2b-ggzh",
+      "category": "DVC"
+    },
+    {
       "id": 1,
       "title": "Fiesta Ready to Serve",
       "thumbnailUrl": "/thumbnail/fiesta.jpg",
@@ -195,13 +202,6 @@
       "thumbnailUrl": "/thumbnail/PLN.png",
       "link": "https://youtube.com/embed/LaGXy7Tn33o?si=sNlkPSvGJ3FcRR9j",
       "category": "Company Profile"
-    },
-    {
-      "id": 29,
-      "title": "LUXEIR",
-      "thumbnailUrl": "/thumbnail/LUXEIR.png",
-      "link": "https://youtube.com/embed/b3Jx0uLbIJI?si=71rZcEqdx2b-ggzh",
-      "category": "DVC"
     }
   ]
 }
