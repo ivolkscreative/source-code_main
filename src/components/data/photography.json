@@ -113,6 +113,12 @@
       "category": "Commercial"
     },
     {
+      "id": 53,
+      "name": "LUXEIR",
+      "imageUrl": "/photography/commercial/LUXEIR.jpg",
+      "category": "Corporate"
+    },
+    {
       "id": 19,
       "name": "Black Jam",
       "imageUrl": "/photography/beautycare/BLACKJAM_BROCHURE-01.jpg",
