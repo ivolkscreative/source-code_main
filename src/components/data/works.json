@@ -8,6 +8,13 @@
       "category": "DVC"
     },
     {
+      "id": 28,
+      "title": "PLN",
+      "thumbnailUrl": "/thumbnail/PLN.png",
+      "link": "https://youtube.com/embed/LaGXy7Tn33o?si=sNlkPSvGJ3FcRR9j",
+      "category": "Company Profile"
+    },
+    {
       "id": 1,
       "title": "Fiesta Ready to Serve",
       "thumbnailUrl": "/thumbnail/fiesta.jpg",
@@ -195,13 +202,6 @@
       "thumbnailUrl": "/thumbnail/coba4.jpg",
       "link": "https://www.youtube.com/embed/Z4_cyuYQStY?si=IWcplbocOcEWN_8l",
       "category": "Music Video"
-    },
-    {
-      "id": 28,
-      "title": "PLN",
-      "thumbnailUrl": "/thumbnail/PLN.png",
-      "link": "https://youtube.com/embed/LaGXy7Tn33o?si=sNlkPSvGJ3FcRR9j",
-      "category": "Company Profile"
     }
   ]
 }
