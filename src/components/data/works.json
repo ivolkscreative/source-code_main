@@ -8,6 +8,13 @@
       "category": "DVC"
     },
     {
+      "id": 31,
+      "title": "LUXEIR PERFUME 3D PRODUCT",
+      "thumbnailUrl": "/thumbnail/LUXEIR3D.png",
+      "link": "https://youtube.com/embed/LmidWMABeKs?si=Q3nKaA-m3yOquKKU",
+      "category": "Motion Graphics"
+    },
+    {
       "id": 28,
       "title": "PLN",
       "thumbnailUrl": "/thumbnail/PLN.png",
@@ -20,13 +27,6 @@
       "thumbnailUrl": "/thumbnail/LIMANI.png",
       "link": "https://youtube.com/embed/VZ9uqv4sIWk?si=24OSCu4LckM-z-5R",
       "category": "AI Project"
-    },
-    {
-      "id": 31,
-      "title": "LUXEIR PERFUME 3D PRODUCT",
-      "thumbnailUrl": "/thumbnail/LUXEIR3D.png",
-      "link": "https://youtube.com/embed/LmidWMABeKs?si=Q3nKaA-m3yOquKKU",
-      "category": "Motion Graphics"
     },
     {
       "id": 1,
