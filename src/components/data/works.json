@@ -1,34 +1,6 @@
 {
   "data": [
     {
-      "id": 29,
-      "title": "LUXEIR",
-      "thumbnailUrl": "/thumbnail/LUXEIR.png",
-      "link": "https://youtube.com/embed/cnRwT6aJ4Vc?si=essDYydnbE4HEW4y",
-      "category": "DVC"
-    },
-    {
-      "id": 31,
-      "title": "LUXEIR PERFUME 3D PRODUCT",
-      "thumbnailUrl": "/thumbnail/LUXEIR3D.png",
-      "link": "https://youtube.com/embed/LmidWMABeKs?si=Q3nKaA-m3yOquKKU",
-      "category": "Motion Graphics"
-    },
-    {
-      "id": 28,
-      "title": "PLN",
-      "thumbnailUrl": "/thumbnail/PLN.png",
-      "link": "https://youtube.com/embed/ywU1SwRKFVw?si=oyIUiczjLGMlAAGS",
-      "category": "Corporate"
-    },
-    {
-      "id": 30,
-      "title": "LIMANI",
-      "thumbnailUrl": "/thumbnail/LIMANI.png",
-      "link": "https://youtube.com/embed/VZ9uqv4sIWk?si=24OSCu4LckM-z-5R",
-      "category": "AI Project"
-    },
-    {
       "id": 1,
       "title": "Fiesta Ready to Serve",
       "thumbnailUrl": "/thumbnail/fiesta.jpg",
@@ -216,6 +188,69 @@
       "thumbnailUrl": "/thumbnail/coba4.jpg",
       "link": "https://www.youtube.com/embed/Z4_cyuYQStY?si=IWcplbocOcEWN_8l",
       "category": "Music Video"
+    },
+    {
+      "id": 28,
+      "title": "PLN",
+      "thumbnailUrl": "/thumbnail/PLN.png",
+      "link": "https://youtube.com/embed/ywU1SwRKFVw?si=oyIUiczjLGMlAAGS",
+      "category": "Corporate"
+    },
+    {
+      "id": 29,
+      "title": "LUXEIR",
+      "thumbnailUrl": "/thumbnail/LUXEIR.png",
+      "link": "https://youtube.com/embed/cnRwT6aJ4Vc?si=essDYydnbE4HEW4y",
+      "category": "DVC"
+    },
+    {
+      "id": 30,
+      "title": "LIMANI",
+      "thumbnailUrl": "/thumbnail/LIMANI.png",
+      "link": "https://youtube.com/embed/VZ9uqv4sIWk?si=24OSCu4LckM-z-5R",
+      "category": "AI Project"
+    },
+    {
+      "id": 31,
+      "title": "LUXEIR PERFUME 3D PRODUCT",
+      "thumbnailUrl": "/thumbnail/LUXEIR3D.png",
+      "link": "https://youtube.com/embed/LmidWMABeKs?si=Q3nKaA-m3yOquKKU",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 32,
+      "title": "RAPIM FIFGROUP 2025",
+      "thumbnailUrl": "/thumbnail/RAPIMFIFGROUP2025-1.png",
+      "link": "https://youtube.com/embed/wu5-G_EGWIg?si=C_5j90hABN7Bl_gv",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 33,
+      "title": "RAPIM FIFGROUP 2025",
+      "thumbnailUrl": "/thumbnail/RAPIMFIFGROUP2025-2.png",
+      "link": "https://youtube.com/embed/tcaft1LUszk?si=BSyuXVU2RUxol_Pa",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 34,
+      "title": "RAPIM FIFGROUP 2025",
+      "thumbnailUrl": "/thumbnail/RAPIMFIFGROUP2025-3.png",
+      "link": "https://youtube.com/embed/GYGuvfvVHqE?si=_SxOjUmq7mAl0vhG",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 35,
+      "title": "RAPIM FIFGROUP 2025",
+      "thumbnailUrl": "/thumbnail/RAPIMFIFGROUP2025-4.png",
+      "link": "https://youtube.com/embed/cfLysvyd--0?si=wYkIkJleCsckfpwg",
+      "category": "Motion Graphics"
+    },
+    {
+      "id": 36,
+      "title": "RAPIM FIFGROUP 2025",
+      "thumbnailUrl": "/thumbnail/RAPIMFIFGROUP2025-5.png",
+      "link": "https://youtube.com/embed/YBecAzakvVE?si=uS-EGG4HvHyKZe9f",
+      "category": "Motion Graphics"
     }
   ]
 }
